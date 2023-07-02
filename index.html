@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+
+    <h1>Converter cm-inch</h1>
+    <input id="input" type="text" />
+    <button onclick="cm()">Convert to cm</button>
+    <button onclick="inch()">Convert to inch</button>
+    <button onclick="clearItems()">clear</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        function inch() {
+            let value = document.getElementById("input").value;
+            let result = document.getElementById("result")
+            let div = document.createElement("div");
+            value = value * 2.54
+            div.innerHTML = value + " inch";
+            result.appendChild(div);
+        }
+
+        function cm() {
+            let value = document.getElementById("input").value;
+            let result = document.getElementById("result")
+            let div = document.createElement("div");
+            value = value / 2.54
+            div.innerHTML = value + " cm";
+            result.appendChild(div);
+        }
+
+        function clearItems() {
+            let result = document.getElementById("result")
+            result.innerHTML = "";
+        }
+
+
+    </script>
+</body>
+</html>
