@@ -18,9 +18,10 @@
 
     <script>
 
+        const result = document.getElementById("result")
+
         function inch() {
             let value = document.getElementById("input").value;
-            let result = document.getElementById("result")
             let div = document.createElement("div");
             value = value * 2.54
             div.innerHTML = value + " inch";
@@ -29,7 +30,6 @@
 
         function cm() {
             let value = document.getElementById("input").value;
-            let result = document.getElementById("result")
             let div = document.createElement("div");
             value = value / 2.54
             div.innerHTML = value + " cm";
@@ -37,7 +37,6 @@
         }
 
         function clearItems() {
-            let result = document.getElementById("result")
             result.innerHTML = "";
         }
 
